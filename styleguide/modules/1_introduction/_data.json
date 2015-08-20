@@ -1,9 +1,0 @@
-{
-	"id": "introduction",
-	"name": "Introduction",
-	"scripts": ["introduction.js"],
-	"items" : [
-        "Hello! Welcome to the Huge Styleguide project, made for Designers and Developers.",
-        "Please feel free to collaborate with the project <a href='http://github.com/hugeinc/styleguide'>on Github</a>. You can read the documentation <a href='#'>here</a>."
-    ]
-}
