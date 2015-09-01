@@ -19,4 +19,4 @@ node_modules
 npm-debug.log
 arc-manager.json
 .sass-cache
-client/src/vendor
+client/vendor

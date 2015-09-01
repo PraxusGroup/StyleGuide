@@ -1,22 +1,17 @@
 {
-  "name": "StyleGuide",
+  "name": "praxus-style-guide",
+  "description": "A Brand/Web Style Guide for Praxus",
   "version": "0.1.0",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "client/vendor",
-    "client/bower_components",
-    "test",
-    "server/tests",
-    "tests"
+  "authors": [
+    "Mathew Kleppin <mathew.kleppin@gmail.com>"
   ],
+  "license": "MIT",
   "dependencies": {
-    "materialize": "~0.97.0",
+    "angular-animate": "~1.4.5",
     "angular-materialize": "*",
+    "angular-resource": "~1.4.5",
+    "angular-touch": "~1.4.5",
     "angular-ui-router": "~0.2.15",
-    "angular-animate": "~1.4.4",
-    "angular-touch": "~1.4.4",
-    "angular-resource": "~1.4.4"
+    "Materialize": "materialize#~0.97.0"
   }
 }
