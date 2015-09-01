@@ -1,4 +1,12 @@
 /* _functions.scss */
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
 /*
 ## Triangle
 * @include triangle within a pseudo element and add positioning properties (ie. top, left)
@@ -11,14 +19,12 @@
 * Clearfix
 */
 .clearfix {
-  *zoom: 1;
-}
-.clearfix:after {
-  content: '';
-  display: table;
-  line-height: 0;
-  clear: both;
-}
+  *zoom: 1; }
+  .clearfix:after {
+    content: '';
+    display: table;
+    line-height: 0;
+    clear: both; }
 
 /*
 * Respond To
@@ -43,76 +49,62 @@
 @-webkit-keyframes alertMe {
   from {
     border-width: 3px;
-    border-color: gold;
-  }
+    border-color: gold; }
   to {
     border-width: 0;
-    border-color: rgba(255, 215, 0, 0.1);
-  }
-}
+    border-color: rgba(255, 215, 0, 0.1); } }
+
 @-moz-keyframes alertMe {
   from {
     border-width: 3px;
-    border-color: gold;
-  }
+    border-color: gold; }
   to {
     border-width: 0;
-    border-color: rgba(255, 215, 0, 0.1);
-  }
-}
+    border-color: rgba(255, 215, 0, 0.1); } }
+
 @-ms-keyframes alertMe {
   from {
     border-width: 3px;
-    border-color: gold;
-  }
+    border-color: gold; }
   to {
     border-width: 0;
-    border-color: rgba(255, 215, 0, 0.1);
-  }
-}
+    border-color: rgba(255, 215, 0, 0.1); } }
+
 @keyframes alertMe {
   from {
     border-width: 3px;
-    border-color: gold;
-  }
+    border-color: gold; }
   to {
     border-width: 0;
-    border-color: rgba(255, 215, 0, 0.1);
-  }
-}
+    border-color: rgba(255, 215, 0, 0.1); } }
+
 /* nav.scss */
 header, main, footer {
-  padding-left: 240px;
-}
+  padding-left: 240px; }
 
-nav.top-nav a.page-title {
+nav.top-nav span.page-title {
   line-height: 122px;
-  font-size: 48px;
-}
+  font-size: 48px; }
 
 ul.side-nav.fixed li a {
   font-size: 13px;
   line-height: 44px;
-  height: 44px;
-}
+  height: 44px; }
 
 .side-nav.fixed a {
   display: block;
   padding: 0 15px;
-  color: #444;
-}
+  color: #444; }
 
 .side-nav .collapsible-header {
   background-color: transparent;
   border: none;
   line-height: inherit;
   height: inherit;
-  margin: 0 1rem;
-}
+  margin: 0 1rem; }
 
 .bold > a {
-  font-weight: bold;
-}
+  font-weight: bold; }
 
 .side-nav a {
   color: #444;
@@ -120,8 +112,7 @@ ul.side-nav.fixed li a {
   font-size: 1rem;
   height: 64px;
   line-height: 64px;
-  padding: 0 15px;
-}
+  padding: 0 15px; }
 
 .collapsible-header {
   display: block;
@@ -130,38 +121,33 @@ ul.side-nav.fixed li a {
   line-height: 3rem;
   padding: 0 1rem;
   background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
+  border-bottom: 1px solid #ddd; }
 
 ul.side-nav.fixed li.logo {
   text-align: center;
   margin-top: 32px;
   margin-bottom: 16px;
-  border-bottom: 1px solid #ddd;
-}
+  border-bottom: 1px solid #ddd; }
+  ul.side-nav.fixed li.logo:hover {
+    background-color: transparent  !important; }
 
 ul.side-nav.fixed li {
-  line-height: 44px;
-}
+  line-height: 44px; }
 
 #logo-container {
   height: auto;
-  margin-bottom: 32px;
-}
+  margin-bottom: 32px; }
 
 nav .nav-wrapper {
   position: relative;
-  height: 100%;
-}
+  height: 100%; }
 
 nav.top-nav {
   height: 122px;
-  box-shadow: none;
-}
+  box-shadow: none; }
 
 a.button-collapse.top-nav.full {
-  line-height: 122px;
-}
+  line-height: 122px; }
 
 a.button-collapse.top-nav {
   position: absolute;
@@ -174,39 +160,36 @@ a.button-collapse.top-nav {
   margin-left: 1.5rem;
   color: #fff;
   font-size: 32px;
-  z-index: 2;
-}
+  z-index: 2; }
 
 @media only screen and (max-width: 992px) {
   nav .nav-wrapper a.page-title {
-    font-size: 36px;
-  }
-
+    font-size: 36px; }
   nav .nav-wrapper {
-    text-align: center;
-  }
-
+    text-align: center; }
   header, main, footer {
-    padding-left: 0;
-  }
-}
+    padding-left: 0; } }
+
 @media only screen and (min-width: 601px) {
   nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
     height: 64px;
-    line-height: 64px;
-  }
-}
+    line-height: 64px; } }
+
 /* colors.scss */
 .primary {
-  background-color: #F12A27 !important;
-}
+  background-color: #F12A27 !important; }
 
 .primary-text {
-  color: #F12A27 !important;
-}
+  color: #F12A27 !important; }
 
 a {
   cursor: pointer;
-}
+  -webkit-tap-highlight-color: transparent; }
 
-/*# sourceMappingURL=styles.css.map */
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 85%; } }
+
+@media only screen and (min-width: 601px) {
+  .container {
+    width: 85%; } }

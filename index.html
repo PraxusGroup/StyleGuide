@@ -23,14 +23,16 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-  <header>
+  <header ng-cloak>
     <nav class="top-nav primary">
       <div class="container">
-        <div class="nav-wrapper"><a class="page-title">SideNav</a></div>
+        <div class="nav-wrapper">
+          <span class="page-title">{{ $root.pageTitle || 'Praxus' }}</span>
+        </div>
       </div>
     </nav>
     <div class="container">
-      <a  class="button-collapse top-nav full hide-on-large-only" data-activates="slide-out" data-sidenav="left"><i class="mdi-navigation-menu"></i></a>
+      <a class="button-collapse top-nav full hide-on-large-only" data-activates="slide-out" data-sidenav="left"><i class="mdi-navigation-menu"></i></a>
     </div>
     <ul id="slide-out" class="side-nav fixed">
       <li class="logo">
@@ -38,11 +40,11 @@
           <img src="images/Logo.png" class="responsive-img" alt="Praxus Group">
         </a>
       </li>
-      <li><a>First Sidebar Link</a></li>
-      <li><a>Second Sidebar Link</a></li>
+      <li class="bold"><a>First Sidebar Link</a></li>
+      <li class="bold"><a>Second Sidebar Link</a></li>
       <li class="no-padding">
         <ul class="collapsible collapsible-accordion">
-          <li>
+          <li class="bold">
             <a class="collapsible-header">Dropdown</a>
             <div class="collapsible-body">
               <ul>

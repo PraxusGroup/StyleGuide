@@ -3,8 +3,7 @@ header, main, footer {
   padding-left: 240px;
 }
 
-
-nav.top-nav a.page-title {
+nav.top-nav span.page-title {
     line-height: 122px;
     font-size: 48px;
 }
@@ -57,6 +56,10 @@ ul.side-nav.fixed li.logo {
     margin-top: 32px;
     margin-bottom: 16px;
     border-bottom: 1px solid #ddd;
+
+    &:hover {
+        background-color: transparent  !important;
+    }
 }
 
 ul.side-nav.fixed li {
