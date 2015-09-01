@@ -7,7 +7,8 @@ var concat      = require('gulp-concat');
 var plumber     = require('gulp-plumber');
 var uglify      = require('gulp-uglify');
 var webserver   = require('gulp-webserver');
-var compass     = require('gulp-compass');
+var sass        = require('gulp-sass');
+var neat        = require('node-neat').includePaths;
 
 // --------------------------------------------------------------------
 // Error Handler
@@ -40,11 +41,8 @@ gulp.task('serve-watch', function(){
     .pipe(plumber({
         errorHandler: onError
     }))
-    .pipe(compass({
-      css: 'client/css',
-      sass: 'client/css/scss',
-      image: 'client/images',
-      sourcemap: true
+    .pipe(sass({
+      includePaths: ['styles'].concat(neat)
     }))
     .pipe(gulp.dest('client/css'));
 });
