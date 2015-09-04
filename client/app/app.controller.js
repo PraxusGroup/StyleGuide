@@ -5,9 +5,20 @@
     .module('app')
     .controller('AppController', AppController);
 
-  AppController.$inject = ['$rootScope'];
+  AppController.$inject = ['$rootScope', '$state', 'Menu'];
 
-  function AppController($rootScope){
+  function AppController($rootScope, $state, Menu){
+
+    var _this = this;
+
+    _this.menu = Menu.menuItems();
+
+    $rootScope.$on('$stateChangeSuccess', generateMenu);
+
+    function generateMenu(event, toState, toParams, fromState, fromParams){
+      _this.pageTitle = toState.title;
+      _this.active = Menu.activeMenuItem(toState.name);
+    }
 
   }
 

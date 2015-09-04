@@ -1,10 +1,10 @@
 /* colors.scss */
-$primary-color: #F12A27;
+$primary-color-red: #F12A27;
 
-.primary {
-  background-color: $primary-color !important;
+.primary-red {
+  background-color: $primary-color-red !important;
 }
 
-.primary-text {
-  color: $primary-color !important;
+.primary-red-text {
+  color: $primary-color-red !important;
 }
