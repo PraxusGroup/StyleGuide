@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="app" ng-controller="AppController">
+<html lang="en" ng-app="app" ng-controller="AppController as main">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,10 +24,10 @@
   <![endif]-->
 
   <header ng-cloak>
-    <nav class="top-nav primary">
+    <nav class="top-nav primary-red">
       <div class="container">
         <div class="nav-wrapper">
-          <span class="page-title">{{ $root.pageTitle || 'Praxus' }}</span>
+          <span class="page-title">{{ main.pageTitle || 'Praxus' }}</span>
         </div>
       </div>
     </nav>
@@ -40,18 +40,18 @@
           <img src="images/Logo.png" class="responsive-img" alt="Praxus Group">
         </a>
       </li>
-      <li class="bold"><a>First Sidebar Link</a></li>
-      <li class="bold"><a>Second Sidebar Link</a></li>
-      <li class="no-padding">
-        <ul class="collapsible collapsible-accordion">
+      <li ng-repeat="item in main.menu | orderBy: 'id'"
+          ng-class="{'bold': !item.subMenu, 'no-padding': item.subMenu, 'active': main.active.id === item.id} ">
+        <a ng-if="item.name" ng-href="#{{ item.name }}">{{ item.text }}</a>
+        <ul ng-if="item.subMenu" class="collapsible collapsible-accordion">
           <li class="bold">
-            <a class="collapsible-header">Dropdown</a>
+            <a class="collapsible-header">{{ item.text }}</a>
             <div class="collapsible-body">
               <ul>
-                <li class="active"><a>First</a></li>
-                <li><a>Second</a></li>
-                <li><a>Third</a></li>
-                <li><a>Fourth</a></li>
+                <li ng-repeat="sub in item.subMenu"
+                    ng-class="{'active': main.active.subId === sub.id}">
+                    <a ng-href="#{{ sub.name }}">{{ sub.text }}</a>
+                </li>
               </ul>
             </div>
           </li>
@@ -73,6 +73,8 @@
   <script src="app/app.module.js"></script>
   <script src="app/app.config.js"></script>
   <script src="app/app.controller.js"></script>
+  <script src="app/services/menu.factory.js"></script>
   <script src="app/views/main/main.controller.js"></script>
+  <script src="app/views/colors/colors.controller.js"></script>
 
 </html>

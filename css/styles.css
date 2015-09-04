@@ -176,15 +176,20 @@ a.button-collapse.top-nav {
     line-height: 64px; } }
 
 /* colors.scss */
-.primary {
+.primary-red {
   background-color: #F12A27 !important; }
 
-.primary-text {
+.primary-red-text {
   color: #F12A27 !important; }
 
 a {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent; }
+
+.material-bounce {
+  -webkit-transition: all 600ms cubic-bezier(0.62, -0.005, 0.26, 0.995);
+  -moz-transition: all 600ms cubic-bezier(0.62, -0.005, 0.26, 0.995);
+  transition: all 600ms cubic-bezier(0.62, -0.005, 0.26, 0.995); }
 
 @media only screen and (min-width: 993px) {
   .container {
