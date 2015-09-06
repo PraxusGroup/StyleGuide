@@ -7,6 +7,17 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.color-pane {
+  height: 200px;
+
+  span {
+    width: auto;
+    margin: auto;
+    text-align: center;
+    font-size:130%;
+  }
+}
+
 .material-bounce {
   @include materialBounce();
 }

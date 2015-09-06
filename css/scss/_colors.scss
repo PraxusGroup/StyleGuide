@@ -1,5 +1,15 @@
 /* colors.scss */
-$primary-color-red: #F12A27;
+$primary-color-red: #F12A27; //Alizarin?
+$primary-color-dark: #212121;
+$primary-color-light: #F1F1F1;
+
+$secondary-color-purple: #6f4f96;
+$secondary-color-blue: #7f93bf;
+$secondary-color-yellow: #ffc823;
+
+$grey-color-dark: #363636;
+$grey-color-grey: #7b7373;
+$grey-color-light: #878293;
 
 .primary-red {
   background-color: $primary-color-red !important;
@@ -7,4 +17,44 @@ $primary-color-red: #F12A27;
 
 .primary-red-text {
   color: $primary-color-red !important;
+}
+
+.primary-black {
+  background-color: $primary-color-dark !important;
+}
+
+.primary-black-text {
+  color: $primary-color-dark !important;
+}
+
+.primary-white {
+  background-color: $primary-color-light !important;
+}
+
+.primary-white-text {
+  color: $primary-color-light !important;
+}
+
+.secondary-purple {
+  background-color: $secondary-color-purple !important;
+}
+
+.secondary-blue {
+  background-color: $secondary-color-blue !important;
+}
+
+.secondary-yellow {
+  background-color: $secondary-color-yellow !important;
+}
+
+.grey-dark {
+  background-color: $grey-color-dark !important;
+}
+
+.grey-grey {
+  background-color: $grey-color-grey !important;
+}
+
+.grey-light {
+  background-color: $grey-color-light !important;
 }

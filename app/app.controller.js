@@ -17,6 +17,7 @@
 
     function generateMenu(event, toState, toParams, fromState, fromParams){
       _this.pageTitle = toState.title;
+      _this.navColor = toState.color;
       _this.active = Menu.activeMenuItem(toState.name);
     }
 
