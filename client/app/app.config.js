@@ -21,6 +21,7 @@
       .state({
         name: 'colors',
         title: 'Colors',
+        color: 'primary-black',
         url: '/colors',
         templateUrl: 'app/views/colors/colors.html',
         controller: 'ColorsController',
